@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S. Pavithra - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: skyblue;
+      color: #003366;
+      text-align: center;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-bottom: 2px solid #005580;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav button {
+      background: transparent;
+      border: none;
+      font-weight: bold;
+      color: #004466;
+      margin: 0 12px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      color: #002233;
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    section {
+      display: none;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #d6f0ff;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9rem;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    a {
+      color: #004466;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>S. Pavithra</h1>
+    <nav>
+      <button onclick="showSection('home')">Home</button>
+      <button onclick="showSection('about')">About</button>
+      <button onclick="showSection('skills')">Skills</button>
+      <button onclick="showSection('hobbies')">Hobbies</button>
+      <button onclick="showSection('contact')">Contact</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="active">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Hello! I am <b>S. Pavithra</b>, currently pursuing <b>BCA 2nd Year</b> at 
+        <i>Arcot Sri Mahaalakshmi Women's College</i> under Thiruvalluvar University.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>College: Arcot Sri Mahaalakshmi Women's College</p>
+      <p>University: Thiruvalluvar University</p>
+      <p>Department: Bachelor of Computer Applications (BCA) - 2nd Year</p>
+    </section>
+
+    <section id="skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li>🐍 Python</li>
+        <li>💻 C++</li>
+        <li>☕ Java</li>
+      </ul>
+    </section>
+
+    <section id="hobbies">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>📖 Reading</li>
+        <li>💃 Dancing</li>
+        <li>🎤 Singing</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: pavithra@example.com</p>
+      <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">yourgithub</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">yourlinkedin</a></p>
+    </section>
+  </main>
+
+  <footer>© 2025 S. Pavithra</footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("main section").forEach(sec => {
+        sec.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
